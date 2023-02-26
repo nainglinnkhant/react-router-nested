@@ -8,7 +8,7 @@ interface Props {
 const UserLink = ({ user }: Props) => {
   return (
     <li key={user.id}>
-      <NavLink to={`${user.id}`} className='block mb-2'>
+      <NavLink to={`${user.id}`} className='block mb-2' activeClassName='text-teal-500'>
         {user.username}
       </NavLink>
     </li>
