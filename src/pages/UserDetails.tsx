@@ -26,6 +26,8 @@ const UserDetails = () => {
 
   if (loading) return <p>Loading...</p>
 
+  if (!user?.name) return <p>User not found!</p>
+
   return (
     <div>
       <div className='flex'>
