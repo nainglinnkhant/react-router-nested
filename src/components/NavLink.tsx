@@ -1,4 +1,10 @@
-import { Link, LinkProps, matchRoutes, useLocation } from 'react-router-dom'
+import {
+  Link,
+  LinkProps,
+  matchRoutes,
+  useLocation,
+  useResolvedPath,
+} from 'react-router-dom'
 
 import { routes } from '../App'
 
@@ -15,21 +21,23 @@ const NavLink = ({
   activeClassName,
   inactiveClassName,
   exact,
+  ...rest
 }: Props) => {
   const location = useLocation()
   const matchedRoutes = matchRoutes(routes, location)
+  const resolvedPath = useResolvedPath(to)
 
   let isActive
   if (exact) {
-    isActive = location.pathname === to
+    isActive = location.pathname === resolvedPath.pathname
   } else {
-    isActive = matchedRoutes?.some((route) => route.pathname === to)
+    isActive = matchedRoutes?.some((route) => route.pathname === resolvedPath.pathname)
   }
 
   const allClassName = `${className} ${isActive ? activeClassName : inactiveClassName}`
 
   return (
-    <Link to={to} className={allClassName}>
+    <Link to={to} className={allClassName} {...rest}>
       {children}
     </Link>
   )
