@@ -3,9 +3,9 @@ import { Outlet } from 'react-router'
 import Tabs from '../components/Tabs'
 
 const tabs = [
-  { name: 'Overview', path: '/' },
-  { name: 'New Users', path: '/new-users' },
-  { name: 'Sales', path: '/sales' },
+  { name: 'Overview', path: '' },
+  { name: 'New Users', path: 'new-users' },
+  { name: 'Sales', path: 'sales' },
 ]
 
 const Dashboard = () => {

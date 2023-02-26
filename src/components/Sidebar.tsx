@@ -1,9 +1,9 @@
 import NavItem from './NavItem'
 
 const navLinks = [
-  { name: 'Dashboard', path: '/' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Team', path: '/team' },
+  { name: 'Dashboard', path: '' },
+  { name: 'Projects', path: 'projects' },
+  { name: 'Team', path: 'team' },
 ]
 
 const Sidebar = () => {
