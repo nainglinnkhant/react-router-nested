@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 
+import UserInfo from '../components/UserInfo'
 import { User } from '../types/types'
 
 const fetchUser = async (id: string) => {
@@ -30,25 +31,10 @@ const UserDetails = () => {
 
   return (
     <div>
-      <div className='flex'>
-        <p className='mr-2'>Name:</p>
-        <p className='mb-2'>{user?.name}</p>
-      </div>
-
-      <div className='flex'>
-        <p className='mr-2'>Email:</p>
-        <p className='mb-2'>{user?.email}</p>
-      </div>
-
-      <div className='flex'>
-        <p className='mr-2'>Phone:</p>
-        <p className='mb-2'>{user?.phone}</p>
-      </div>
-
-      <div className='flex'>
-        <p className='mr-2'>Website:</p>
-        <p className='mb-2'>{user?.website}</p>
-      </div>
+      <UserInfo label='Name' value={user.name} />
+      <UserInfo label='Email' value={user.email} />
+      <UserInfo label='Phone' value={user.phone} />
+      <UserInfo label='Website' value={user.website} />
     </div>
   )
 }
