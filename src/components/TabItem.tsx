@@ -11,7 +11,7 @@ const TabItem = ({ tab }: Props) => {
       <NavLink
         to={tab.path}
         className='inline-block px-5 py-2 rounded-2xl mr-5 text-sm'
-        inactiveClassName='bg-gray-100'
+        inactiveClassName='bg-gray-100 hover:bg-gray-200'
         activeClassName='bg-gray-300'
         exact={tab.name === 'Overview'}
       >

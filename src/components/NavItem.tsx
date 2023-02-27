@@ -11,7 +11,7 @@ const NavItem = ({ navItem }: Props) => {
       <NavLink
         to={navItem.path}
         className='block mb-2'
-        inactiveClassName='text-gray-400'
+        inactiveClassName='text-gray-400 hover:text-gray-500'
         activeClassName='text-gray-900'
       >
         {navItem.name}
