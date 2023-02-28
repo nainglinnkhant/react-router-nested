@@ -1,5 +1,5 @@
 import NavLink from './NavLink'
-import { TabItem as TabItemType } from '../types/types'
+import type { TabItem as TabItemType } from '../types/types'
 
 interface Props {
   tab: TabItemType

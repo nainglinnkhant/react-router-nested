@@ -1,11 +1,12 @@
 import TabItem from './TabItem'
-import { TabItem as TabItemType } from '../types/types'
 
-interface Props {
-  tabs: TabItemType[]
-}
+const tabs = [
+  { name: 'Overview', path: '' },
+  { name: 'New Users', path: 'new-users' },
+  { name: 'Sales', path: 'sales' },
+]
 
-const Tabs = ({ tabs }: Props) => {
+const Tabs = () => {
   return (
     <nav>
       <ul>

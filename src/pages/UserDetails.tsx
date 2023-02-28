@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 
 import UserInfo from '../components/UserInfo'
-import { User } from '../types/types'
+import type { User } from '../types/types'
 
 const fetchUser = async (id: string) => {
   const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)

@@ -1,5 +1,5 @@
 import NavLink from './NavLink'
-import { NavItem as NavItemType } from '../types/types'
+import type { NavItem as NavItemType } from '../types/types'
 
 interface Props {
   navItem: NavItemType
